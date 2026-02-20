@@ -1,39 +1,75 @@
-# AI Assisted Developer Evaluation Test
+# Task Management Pro - Full-Stack Application
 
 ![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)
-![Angular](https://img.shields.io/badge/angular-17.0.0-red)
+![React](https://img.shields.io/badge/react-19.2.4-61dafb)
 ![TypeScript](https://img.shields.io/badge/typescript-5.3.2-blue)
 ![Express](https://img.shields.io/badge/express-4.18.2-lightgrey)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-## Overview
+## 🌟 Overview
 
-This is a **60-minute live AI-assisted coding evaluation** designed to assess a developer's ability to work effectively with AI tools like GitHub Copilot or similar assistants. Candidates **must actively use an AI coding assistant** throughout the test to demonstrate both technical proficiency and AI collaboration skills.
+A **modern, full-stack task management application** featuring a stunning PS3-inspired animated gradient UI. Built with React, TypeScript, Node.js, and Express with complete CRUD operations and market-standard architecture.
 
-The evaluation focuses on practical problem-solving, clean code architecture, and the ability to leverage AI tools efficiently while maintaining code quality and correctness.
+### ✨ Key Features
 
-### Candidate Choice
+**Backend:**
+- ✅ RESTful API with full CRUD operations
+- ✅ In-memory data storage with TypeScript models
+- ✅ Input validation and error handling
+- ✅ Swagger API documentation at `/api-docs`
+- ✅ CORS-enabled for frontend integration
 
-You have the **flexibility to choose** what you want to work on:
-- **Backend Only** - Implement only the backend API requirements
-- **Frontend Only** - Implement only the frontend UI requirements
-- **Full-Stack (Both)** - Implement both backend and frontend (recommended for full-stack positions)
-
-Choose based on your role, expertise, and comfort level. Make your choice clear at the start of the evaluation.
-
-### Important Notes
-⚠️ **Additional requirements will be provided at the 30-minute and 45-minute marks.** Be prepared to adapt and incorporate new requirements into your existing implementation.
+**Frontend:**
+- ✅ Modern React 19 with TypeScript
+- ✅ PS3-style animated wavy gradient background
+- ✅ Glass morphism UI with backdrop blur effects
+- ✅ Responsive design with smooth animations
+- ✅ Color-coded status and priority badges
+- ✅ Form validation and loading states
+- ✅ Error handling with retry functionality
 
 ---
 
-## Main Task (MANDATORY)
+## 🚀 Quick Start
 
-### Objective
-Build a **Task Management Feature** based on your chosen track (Backend, Frontend, or Full-Stack).
+### Prerequisites
 
-⚠️ **Note:** Detailed requirements will be explained verbally by the invigilator at the start of the test. Listen carefully and ask clarifying questions if needed.
+- Node.js (v18+ recommended)
+- npm or yarn
 
-### High-Level Requirements
+### Installation
+
+1. **Clone and setup backend:**
+   ```bash
+   cd backend
+   npm install
+   cp .env.example .env
+   npm run dev
+   ```
+   Backend runs on **http://localhost:3000**
+   Swagger docs at **http://localhost:3000/api-docs**
+
+2. **Setup frontend (in a new terminal):**
+   ```bash
+   cd frontend
+   npm install
+   PORT=4200 npm start
+   ```
+   Frontend runs on **http://localhost:4200**
+
+---
+
+## 🎨 Design Highlights
+
+- **Animated Gradient Background**: PS3-inspired wavy gradient with floating bubble effects
+- **Glass Morphism**: Modern frosted glass effects with backdrop blur
+- **Smooth Animations**: Fade-in, slide-up, and scale animations
+- **Responsive Layout**: Works beautifully on all screen sizes
+- **Color-Coded System**: Intuitive status and priority visualization
+
+---
+
+## 📋 Task Management Features
 
 **Backend Track:**
 - Implement a RESTful API for task management
@@ -47,118 +83,8 @@ Build a **Task Management Feature** based on your chosen track (Backend, Fronten
 - Forms for creating/editing tasks
 - List view with task display
 - Status management functionality
-- **Connect to the provided Mock API** (see ./mock-api/README.md)
-- Use Angular services for data handling with HttpClient
 - Error handling and user feedback
 - Handle async operations (loading states)
-
-**Full-Stack Track:**
-- Complete both Backend and Frontend requirements
-- Integrate frontend with backend API
-- End-to-end functionality
-
-### Additional Information
-- Task structure and specific field requirements will be provided verbally
-- API endpoint specifications will be explained during the test
-- Business logic rules and validation requirements will be communicated by the invigilator
-- **Remember:** Additional requirements will be given at 30 and 45-minute marks
-
----
-
-## Optional Advanced Challenge (These are good to have, not mandatory)
-
-⚠️ **Important:** These challenges are **only** for candidates who have **completed the mandatory task**. Do not attempt optional challenges until your main task is fully functional and tested. You cannot work on mandatory and optional tasks simultaneously.
-
-Choose **one** of the following to implement (bonus points, not required):
-
-### Backend Challenges
-
-**Option 1: Request Logging Middleware**
-- Add middleware to log all incoming requests
-- Include request method, URL, and execution time
-- Log format: `[METHOD] /endpoint - Execution time: Xms`
-
-**Option 2: API Pagination**
-- Implement simple in-memory pagination for `GET /tasks`
-- Support query parameters: `?page=1&limit=10`
-- Return paginated results with metadata (total count, current page, etc.)
-
-**Option 3: Advanced Validation**
-- Implement custom validation rules (e.g., title length constraints, due dates)
-- Add request body sanitization
-- Return detailed validation error messages
-
-### Frontend Challenges
-
-**Option 4: Task Filtering & Search**
-- Add UI controls to filter tasks by status (`todo`, `in-progress`, `done`)
-- Implement real-time search functionality by title/description
-- Display active filter count
-
-**Option 5: Form Validation & UX**
-- Implement reactive form validation with custom validators
-- Add inline error messages
-- Show character count for text fields
-- Disable submit button while loading
-
-**Option 6: Drag-and-Drop Task Reordering**
-- Implement drag-and-drop to reorder tasks
-- Visual feedback during drag operations
-- Persist new order (update task priorities)
-
-**Option 7: Local Storage / Offline Support**
-- Cache tasks in browser localStorage
-- Handle offline mode gracefully
-- Sync with API when connection is restored
-- Show sync status indicator
-
-### Full-Stack Challenges
-
-**Option 8: Real-time Updates**
-- Implement polling or WebSocket for real-time task updates
-- Show notifications when tasks change
-- Handle concurrent edits gracefully
-
-**Option 9: Task Statistics Dashboard**
-- Backend: Add endpoint for task statistics
-- Frontend: Create dashboard with charts/graphs
-- Display completion rates, task distribution by status
-
----
-
-## Setup Instructions
-
-### Quick Start
-
-Choose your track and follow the setup instructions in the respective folder:
-
-- **Backend Only** → See [backend/README.md](backend/README.md)
-- **Frontend Only** → See [frontend/README.md](frontend/README.md) + [mock-api/README.md](mock-api/README.md)
-- **Full-Stack** → See [backend/README.md](backend/README.md) + [frontend/README.md](frontend/README.md)
-
-### Prerequisites
-
-- Node.js (v18+ recommended)
-- npm or yarn
-- Angular CLI (for frontend: `npm install -g @angular/cli`)
-- GitHub Copilot or similar AI assistant enabled
-
-### Installation Summary
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
-   cd YOUR-REPO-NAME
-   ```
-
-2. Navigate to your chosen folder(s)
-3. Run `npm install` in each folder
-4. For backend: Copy `.env.example` to `.env`
-5. Follow the specific README instructions
-
----
-
-## AI Usage Guidelines
 
 ### Required AI Interaction
 
